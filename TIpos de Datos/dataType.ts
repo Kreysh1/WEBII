@@ -92,7 +92,7 @@ function saludar(nombre) {
     }
 
     //OBJECTS
-    declare function crear(o:object):void;
+    declare function crear(o:object): void;
 
     crear({prop: 0});
     crear(null);
@@ -113,3 +113,34 @@ function saludar(nombre) {
     let algunValor: unknown = "esto es un string";
     let longitudDelString: number = (algunValor as string).length;
     let longitudDelString2: number = (<string>algunValor).length;
+
+    //FUNCTION
+    function saludar3(nombre: string){
+        console.log(`Hola ${nombre}`);
+    }
+
+    saludar3("Nubia");
+
+    //ANONYM FUNCTION
+    const nombres = ["Juan", "Pedro", "Luis"];
+
+    nombres.forEach(function (s){
+        console.log(s.toUpperCase());
+    });
+
+    nombres.forEach((s) => {
+        console.log(s.toUpperCase());
+    });
+
+    //ALIAS
+    type Punto = {
+        x: number;
+        y: number;
+    }
+
+    function imprimirCoordenada(punto: Punto) {
+        console.log(`La coordenada x es : ${punto.x}`);
+        console.log(`La coordenada y es : ${punto.y}`);
+    }
+
+    imprimirCoordenada({ x: 10, y: 25});
