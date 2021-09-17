@@ -79,3 +79,21 @@ imprimirID('abc');
 var algunValor = "esto es un string";
 var longitudDelString = algunValor.length;
 var longitudDelString2 = algunValor.length;
+//FUNCTION
+function saludar3(nombre) {
+    console.log("Hola " + nombre);
+}
+saludar3("Nubia");
+//ANONYM FUNCTION
+var nombres = ["Juan", "Pedro", "Luis"];
+nombres.forEach(function (s) {
+    console.log(s.toUpperCase());
+});
+nombres.forEach(function (s) {
+    console.log(s.toUpperCase());
+});
+function imprimirCoordenada(punto) {
+    console.log("La coordenada x es : " + punto.x);
+    console.log("La coordenada y es : " + punto.y);
+}
+imprimirCoordenada({ x: 10, y: 25 });
